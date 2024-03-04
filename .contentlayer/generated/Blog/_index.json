@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "published": true,
+    "title": "First Blog",
+    "description": "This is my first blog.",
+    "date": "2022-11-13T00:00:00.000Z",
+    "url": "http://chronark.com/",
+    "repository": "chronark/access",
+    "body": {
+      "raw": "\nThis is my first blog\n\n```\n\n```\n",
+      "code": "var Component=(()=>{var p=Object.create;var s=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var f=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),x=(t,e)=>{for(var a in e)s(t,a,{get:e[a],enumerable:!0})},d=(t,e,a,o)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of m(e))!g.call(t,r)&&r!==a&&s(t,r,{get:()=>e[r],enumerable:!(o=h(e,r))||o.enumerable});return t};var y=(t,e,a)=>(a=t!=null?p(u(t)):{},d(e||!t||!t.__esModule?s(a,\"default\",{value:t,enumerable:!0}):a,t)),b=t=>d(s({},\"__esModule\",{value:!0}),t);var c=f((F,i)=>{i.exports=_jsx_runtime});var v={};x(v,{default:()=>k,frontmatter:()=>j});var n=y(c()),j={title:\"First Blog\",description:\"This is my first blog.\",repository:\"chronark/access\",url:\"http://chronark.com/\",date:\"2022-11-13\",published:!0};function l(t){let e=Object.assign({p:\"p\",div:\"div\",pre:\"pre\",code:\"code\",span:\"span\"},t.components);return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(e.p,{children:\"This is my first blog\"}),`\n`,(0,n.jsx)(e.div,{\"data-rehype-pretty-code-fragment\":\"\",children:(0,n.jsx)(e.pre,{className:\"github-dark\",style:{backgroundColor:\"#24292e\"},tabIndex:\"0\",\"data-language\":\"\",\"data-theme\":\"default\",children:(0,n.jsx)(e.code,{\"data-language\":\"\",\"data-theme\":\"default\",style:{display:\"grid\"},children:(0,n.jsx)(e.span,{\"data-line\":\"\",children:(0,n.jsx)(e.span,{style:{color:\"#e1e4e8\"}})})})})})]})}function _(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,Object.assign({},t,{children:(0,n.jsx)(l,t)})):l(t)}var k=_;return b(v);})();\n;return Component;"
+    },
+    "_id": "blogs/first.mdx",
+    "_raw": {
+      "sourceFilePath": "blogs/first.mdx",
+      "sourceFileName": "first.mdx",
+      "sourceFileDir": "blogs",
+      "contentType": "mdx",
+      "flattenedPath": "blogs/first"
+    },
+    "type": "Blog",
+    "path": "/blogs/first",
+    "slug": "first"
+  }
+]
