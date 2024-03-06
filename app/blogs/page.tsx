@@ -1,11 +1,13 @@
 import Link from "next/link";
-import React from "react";
+
+import React, { useState, FormEvent } from "react";
 import { allBlogs } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
+import EmailForm from "./emailform";
 
 const redis = Redis.fromEnv();
 
@@ -46,8 +48,9 @@ export default async function ProjectsPage() {
             Blogs
           </h2>
         </div>
-        <div className="w-full h-px bg-zinc-800" />
+        <EmailForm />
 
+        <div className="w-full h-px bg-zinc-800" />
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
             <Link href={`/blogs/${featured.slug}`}>
