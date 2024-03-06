@@ -1,7 +1,1 @@
-{
-  "/api/incr": "pages/api/incr.js",
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/api/add-email": "pages/api/add-email.js"
-}
+{"/_error":"pages/_error.js","/_app":"pages/_app.js","/api/add-email":"pages/api/add-email.js","/_document":"pages/_document.js","/api/incr":"pages/api/incr.js","/404":"pages/404.html"}
