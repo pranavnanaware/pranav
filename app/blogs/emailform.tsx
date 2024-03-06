@@ -5,6 +5,7 @@ export default function EmailForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [successMessage, setSuccessMessage] = useState<string>("");
 
   const validateEmail = (email: string): boolean => {
     return /\S+@\S+\.\S+/.test(email);
@@ -32,7 +33,7 @@ export default function EmailForm() {
 
       // Handle response
       const data = await response.json();
-      console.log(data);
+      setSuccessMessage("Thank you for subscribing to the blog!");
       setEmail("");
     } catch (error) {
       // Handle error
@@ -63,6 +64,9 @@ export default function EmailForm() {
             {isLoading ? "Loading..." : "Subscribe"}
           </button>
         </div>
+        {successMessage && (
+          <p className="text-green-500 text-sm mt-2">{successMessage}</p>
+        )}
         {errorMessage && (
           <p className="text-red-500 text-sm mt-2">{errorMessage}</p>
         )}
