@@ -11,30 +11,51 @@ import EmailForm from "./emailform";
 
 const redis = Redis.fromEnv();
 
+const fetchBlogs = async () => {
+  const reqOptions = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.STRAPI_JWT}`,
+    },
+  };
+  const request = await fetch(
+    "http://localhost:1337/api/blogs?populate=*",
+    reqOptions
+  );
+
+  const response = await request.json();
+  return response;
+};
+
 export const revalidate = 60;
 export default async function ProjectsPage() {
+  const blogs = await fetchBlogs();
+  const allBlogs = blogs.data;
   const views = (
     await redis.mget<number[]>(
-      ...allBlogs.map((p) => ["pageviews", "blogs", p.slug].join(":"))
+      ...allBlogs.map((p: any) => ["pageviews", "blogs", p.slug].join(":"))
     )
   ).reduce((acc, v, i) => {
     acc[allBlogs[i].slug] = v ?? 0;
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allBlogs.find((blog) => blog.slug === "first")!;
-  const top2 = allBlogs.find((blog) => blog.slug === "first")!;
-  const top3 = allBlogs.find((blog) => blog.slug === "first")!;
+  const featured = allBlogs.find(
+    (blog: any) => blog.attributes.slug === "second"
+  )!;
+  const top2 = allBlogs.find((blog: any) => blog.attributes.slug === "second")!;
+  const top3 = allBlogs.find((blog: any) => blog.attributes.slug === "second")!;
   const sorted = allBlogs
-    .filter((p) => p.published)
+    .filter((p: any) => p.attributes.published)
     .filter(
-      (blog) =>
-        blog.slug !== featured.slug &&
-        blog.slug !== top2.slug &&
-        blog.slug !== top3.slug
+      (blog: any) =>
+        blog.attributes.slug !== featured.slug &&
+        blog.attributes.slug !== top2.slug &&
+        blog.attributes.slug !== top3.slug
     )
     .sort(
-      (a, b) =>
+      (a: any, b: any) =>
         new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
         new Date(a.date ?? Number.POSITIVE_INFINITY).getTime()
     );
@@ -53,15 +74,19 @@ export default async function ProjectsPage() {
         <div className="w-full h-px bg-zinc-800" />
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
-            <Link href={`/blogs/${featured.slug}`}>
+            <Link href={`/blogs/${featured.attributes.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
+                    {featured.attributes.date ? (
+                      <time
+                        dateTime={new Date(
+                          featured.attributes.date
+                        ).toISOString()}
+                      >
                         {Intl.DateTimeFormat(undefined, {
                           dateStyle: "medium",
-                        }).format(new Date(featured.date))}
+                        }).format(new Date(featured.attributes.date))}
                       </time>
                     ) : (
                       <span>SOON</span>
@@ -70,7 +95,7 @@ export default async function ProjectsPage() {
                   <span className="flex items-center gap-1 text-xs text-zinc-500">
                     <Eye className="w-4 h-4" />{" "}
                     {Intl.NumberFormat("en-US", { notation: "compact" }).format(
-                      views[featured.slug] ?? 0
+                      views[featured.attributes.slug] ?? 0
                     )}
                   </span>
                 </div>
@@ -79,10 +104,10 @@ export default async function ProjectsPage() {
                   id="featured-post"
                   className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
                 >
-                  {featured.title}
+                  {featured.attributes.title}
                 </h2>
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                  {featured.description}
+                  {featured.attributes.description}
                 </p>
                 <div className="absolute bottom-4 md:bottom-8">
                   <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
@@ -95,7 +120,7 @@ export default async function ProjectsPage() {
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
             {[top2, top3].map((blog) => (
-              <Card key={blog.slug}>
+              <Card key={blog.attributes.slug}>
                 <Article blog={blog} views={views[blog.slug] ?? 0} />
               </Card>
             ))}
@@ -106,27 +131,27 @@ export default async function ProjectsPage() {
         <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
           <div className="grid grid-cols-1 gap-4">
             {sorted
-              .filter((_, i) => i % 3 === 0)
-              .map((blog) => (
-                <Card key={blog.slug}>
+              .filter((_: any, i: any) => i % 3 === 0)
+              .map((blog: any) => (
+                <Card key={blog.attributes.slug}>
                   <Article blog={blog} views={views[blog.slug] ?? 0} />
                 </Card>
               ))}
           </div>
           <div className="grid grid-cols-1 gap-4">
             {sorted
-              .filter((_, i) => i % 3 === 1)
-              .map((blog) => (
-                <Card key={blog.slug}>
+              .filter((_: any, i: any) => i % 3 === 1)
+              .map((blog: any) => (
+                <Card key={blog.attributes.slug}>
                   <Article blog={blog} views={views[blog.slug] ?? 0} />
                 </Card>
               ))}
           </div>
           <div className="grid grid-cols-1 gap-4">
             {sorted
-              .filter((_, i) => i % 3 === 2)
-              .map((blog) => (
-                <Card key={blog.slug}>
+              .filter((_: any, i: any) => i % 3 === 2)
+              .map((blog: any) => (
+                <Card key={blog.attributes.slug}>
                   <Article blog={blog} views={views[blog.slug] ?? 0} />
                 </Card>
               ))}
