@@ -27,7 +27,7 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 export default async function PostPage({ params }: Props) {
   const slug = params?.slug;
   const blog = allBlogs.find((blog) => blog.slug === slug);
-
+  console.log(blog);
   if (!blog) {
     notFound();
   }
