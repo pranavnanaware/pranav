@@ -14,7 +14,8 @@ export type Blog = {
   _raw: Local.RawDocumentData
   type: 'Blog'
   published?: boolean | undefined
-  title: string
+  featured?: boolean | undefined
+  Name: string
   description: string
   date?: IsoDateTimeString | undefined
   url?: string | undefined

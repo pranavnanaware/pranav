@@ -1,0 +1,22 @@
+{
+  "published": true,
+  "featured": true,
+  "Name": "Second Blog",
+  "description": "Second Blog",
+  "date": "2024-05-08T13:53:00.000Z",
+  "body": {
+    "raw": "\nHello\n\n",
+    "code": "var Component=(()=>{var l=Object.create;var c=Object.defineProperty;var f=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var x=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),b=(e,t)=>{for(var n in t)c(e,n,{get:t[n],enumerable:!0})},a=(e,t,n,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let o of p(t))!g.call(e,o)&&o!==n&&c(e,o,{get:()=>t[o],enumerable:!(s=f(t,o))||s.enumerable});return e};var j=(e,t,n)=>(n=e!=null?l(m(e)):{},a(t||!e||!e.__esModule?c(n,\"default\",{value:e,enumerable:!0}):n,e)),_=e=>a(c({},\"__esModule\",{value:!0}),e);var i=x((y,d)=>{d.exports=_jsx_runtime});var M={};b(M,{default:()=>D,frontmatter:()=>h});var r=j(i()),h={notionId:\"ecda3730-0d73-491f-b2f9-7e8f90c4b562\",type:\"Blog\",featured:!0,Tags:[],date:new Date(171517638e4),published:!0,slug:\"second\",description:\"Second Blog\",Name:\"Second Blog\"};function u(e){let t=Object.assign({p:\"p\"},e.components);return(0,r.jsx)(t.p,{children:\"Hello\"})}function B(e={}){let{wrapper:t}=e.components||{};return t?(0,r.jsx)(t,Object.assign({},e,{children:(0,r.jsx)(u,e)})):u(e)}var D=B;return _(M);})();\n;return Component;"
+  },
+  "_id": "blog/second.md",
+  "_raw": {
+    "sourceFilePath": "blog/second.md",
+    "sourceFileName": "second.md",
+    "sourceFileDir": "blog",
+    "contentType": "markdown",
+    "flattenedPath": "blog/second"
+  },
+  "type": "Blog",
+  "path": "/blog/second",
+  "slug": "second"
+}
