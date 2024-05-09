@@ -1,0 +1,70 @@
+{
+  "cacheItemsMap": {
+    "blog/first.md": {
+      "document": {
+        "published": true,
+        "Name": "First Blog",
+        "description": "First Blog",
+        "date": "2024-05-08T13:53:00.000Z",
+        "_id": "blog/first.md",
+        "_raw": {
+          "sourceFilePath": "blog/first.md",
+          "sourceFileName": "first.md",
+          "sourceFileDir": "blog",
+          "contentType": "markdown",
+          "flattenedPath": "blog/first"
+        },
+        "type": "Blog",
+        "path": "/blog/first",
+        "slug": "first"
+      },
+      "documentHash": "1715283761468",
+      "hasWarnings": true,
+      "documentTypeName": "Blog"
+    },
+    "blog/second.md": {
+      "document": {
+        "published": false,
+        "Name": "Second Blog",
+        "description": "Second Blog",
+        "date": "2024-05-08T13:53:00.000Z",
+        "_id": "blog/second.md",
+        "_raw": {
+          "sourceFilePath": "blog/second.md",
+          "sourceFileName": "second.md",
+          "sourceFileDir": "blog",
+          "contentType": "markdown",
+          "flattenedPath": "blog/second"
+        },
+        "type": "Blog",
+        "path": "/blog/second",
+        "slug": "second"
+      },
+      "documentHash": "1715283761714",
+      "hasWarnings": true,
+      "documentTypeName": "Blog"
+    },
+    "blog/third.md": {
+      "document": {
+        "published": false,
+        "Name": "Third Blog",
+        "description": "Second Blog",
+        "date": "2024-05-08T13:53:00.000Z",
+        "_id": "blog/third.md",
+        "_raw": {
+          "sourceFilePath": "blog/third.md",
+          "sourceFileName": "third.md",
+          "sourceFileDir": "blog",
+          "contentType": "markdown",
+          "flattenedPath": "blog/third"
+        },
+        "type": "Blog",
+        "path": "/blog/third",
+        "slug": "third"
+      },
+      "documentHash": "1715283761591",
+      "hasWarnings": true,
+      "documentTypeName": "Blog"
+    }
+  }
+}

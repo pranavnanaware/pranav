@@ -18,14 +18,17 @@ const computedFields = {
 
 export const Blog = defineDocumentType(() => ({
   name: "Blog",
-  filePathPattern: "./blogs/**/*.mdx",
+  filePathPattern: "./blog/**/*.mdx",
   contentType: "mdx",
 
   fields: {
     published: {
       type: "boolean",
     },
-    title: {
+    featured: {
+      type: "boolean",
+    },
+    Name: {
       type: "string",
       required: true,
     },

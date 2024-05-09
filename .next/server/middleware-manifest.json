@@ -4,6 +4,7 @@
   "functions": {
     "/api/incr": {
       "files": [
+        "prerender-manifest.js",
         "server/edge-runtime-webpack.js",
         "server/pages/api/incr.js"
       ],

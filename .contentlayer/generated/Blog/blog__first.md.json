@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "featured": true,
+  "Name": "First Blog",
+  "description": "First Blog",
+  "date": "2024-05-08T13:53:00.000Z",
+  "url": "https://pranav.wiki/",
+  "repository": "pranavnanaware",
+  "body": {
+    "raw": "\nHELLO\n\n\n\n\n![image](/images/blog/first/image)\n\n",
+    "code": "var Component=(()=>{var p=Object.create;var s=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var x=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),b=(t,e)=>{for(var r in e)s(t,r,{get:e[r],enumerable:!0})},o=(t,e,r,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of l(e))!f.call(t,a)&&a!==r&&s(t,a,{get:()=>e[a],enumerable:!(i=d(e,a))||i.enumerable});return t};var j=(t,e,r)=>(r=t!=null?p(u(t)):{},o(e||!t||!t.__esModule?s(r,\"default\",{value:t,enumerable:!0}):r,t)),_=t=>o(s({},\"__esModule\",{value:!0}),t);var g=x((D,c)=>{c.exports=_jsx_runtime});var y={};b(y,{default:()=>F,frontmatter:()=>h});var n=j(g()),h={notionId:\"22218651-1a0a-44cd-86fc-0788b68dbb37\",type:\"Blog\",featured:!0,Tags:[],date:new Date(171517638e4),url:\"https://pranav.wiki/\",published:!0,repository:\"pranavnanaware\",slug:\"first\",description:\"First Blog\",Name:\"First Blog\"};function m(t){let e=Object.assign({p:\"p\",img:\"img\"},t.components);return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(e.p,{children:\"HELLO\"}),`\n`,(0,n.jsx)(e.p,{children:(0,n.jsx)(e.img,{src:\"/images/blog/first/image\",alt:\"image\"})})]})}function w(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,Object.assign({},t,{children:(0,n.jsx)(m,t)})):m(t)}var F=w;return _(y);})();\n;return Component;"
+  },
+  "_id": "blog/first.md",
+  "_raw": {
+    "sourceFilePath": "blog/first.md",
+    "sourceFileName": "first.md",
+    "sourceFileDir": "blog",
+    "contentType": "markdown",
+    "flattenedPath": "blog/first"
+  },
+  "type": "Blog",
+  "path": "/blog/first",
+  "slug": "first"
+}
