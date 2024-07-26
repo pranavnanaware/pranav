@@ -25,7 +25,7 @@ const socials = [
   },
   {
     icon: <PersonStandingIcon size={20} />,
-    href: "https://pranavnanaware.vercel.app/",
+    href: "https://pranav.wiki/portfolio",
     label: "Portfolio",
     handle: "pranavnanaware",
   },

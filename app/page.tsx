@@ -5,7 +5,7 @@ import { Header } from "./header";
 
 const navigation = [
   { name: "Blog", href: "/blogs" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Projects", href: "/portfolio" },
   { name: "Contact", href: "/contact" },
 ];
 
