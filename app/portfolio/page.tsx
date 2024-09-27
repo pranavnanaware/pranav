@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <Navigation />
-      <div className="container flex flex-col items-center min-h-screen px-4 mx-auto text-white justify-center space-y-10">
+      <div className="container flex flex-col items-center min-h-screen px-4 mx-auto text-white justify-center py-20">
         <ul className="flex flex-col space-y-6 items-start">
           {projects.map((project, index) => (
             <LinkPreview
