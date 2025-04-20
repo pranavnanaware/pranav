@@ -6,24 +6,37 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
-    default: "pranav.wiki",
-    template: "%s | pranav.wiki",
+    default: "Pranav Nanaware",
+    template: "%s | Pranav Nanaware",
   },
-  description: "full stack software engineer",
+  description: "Pranav Nanaware – Full Stack Software Engineer in the San Francisco Bay Area, California, USA.",
+  keywords: [
+    "Pranav Nanaware",
+    "Full Stack Software Engineer",
+    "San Francisco Bay Area",
+    "California",
+    "Software Developer",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Pranav Nanaware" }],
   openGraph: {
-    title: "pranav.wiki",
-    description: "full stack software engineer",
-    url: "https://pranav.wiki",
-    siteName: "pranav.wiki",
+    title: "Pranav Nanaware",
+    description: "Pranav Nanaware – Full Stack Software Engineer in the San Francisco Bay Area, California, USA.",
+    url: "https://pranav.wtf",
+    siteName: "Pranav Nanaware",
     images: [
       {
-        url: "https://pranav.wiki/og.png",
+        url: "https://pranav.wtf/og.png",
         width: 1920,
         height: 1080,
       },
     ],
     locale: "en-US",
     type: "website",
+  },
+  twitter: {
+    title: "Pranav Nanaware",
+    card: "summary_large_image",
   },
   robots: {
     index: true,
@@ -36,14 +49,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Pranav",
-    card: "summary_large_image",
-  },
   icons: {
     shortcut: "/favicon.png",
   },
 };
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",

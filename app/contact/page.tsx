@@ -7,26 +7,20 @@ import { Card } from "../components/card";
 const socials = [
   {
     icon: <Twitter size={20} />,
-    href: "https://twitter.com/pranav_nanaware",
-    label: "Twitter",
-    handle: "@pranav_nanaware",
+    href: "https://linkedin.com/in/pranavnanaware/",
+    label: "LinkedIn",
+    handle: "@pranavnanaware",
   },
   {
     icon: <Mail size={20} />,
-    href: "mailto:pnanaware@umassd.edu",
+    href: "mailto:nanawarepranav@gmail.com",
     label: "Email",
-    handle: "pnanaware@umassd.edu",
+    handle: "nanawarepranav@gmail.com",
   },
   {
     icon: <Github size={20} />,
     href: "https://github.com/pranavnanaware",
     label: "Github",
-    handle: "pranavnanaware",
-  },
-  {
-    icon: <PersonStandingIcon size={20} />,
-    href: "https://pranav.wiki/portfolio",
-    label: "Portfolio",
     handle: "pranavnanaware",
   },
 ];
@@ -36,7 +30,7 @@ export default function Example() {
     <div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <Navigation />
       <div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-        <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-4 lg:gap-16">
+        <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
           {socials.map((s) => (
             <Card>
               <Link
